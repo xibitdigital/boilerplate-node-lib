@@ -4,7 +4,8 @@
   "description": "Boilerplate for node libs",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules/.bin/mocha --recursive test/*"
+    "test": "node node_modules/.bin/mocha --recursive test/*",
+    "coverage": "nyc mocha"
   },
   "keywords": ["boilerplate"],
   "author": "daniele@xibitdigital.com",
@@ -18,7 +19,8 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
-    "mocha": "^3.5.0"
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0"
   },
   "dependencies": {}
 }
