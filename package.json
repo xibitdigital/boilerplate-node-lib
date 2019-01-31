@@ -1,13 +1,17 @@
 {
   "name": "boilerplate-node-lib",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Boilerplate for node libs",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "node node_modules/.bin/mocha --recursive test/*",
-    "coverage": "nyc mocha"
+    "start": "node index",
+    "test": "jest --coverage",
+    "test-watch": "jest --watch",
+    "precommit": "pretty-quick --staged"
   },
-  "keywords": ["boilerplate"],
+  "keywords": [
+    "boilerplate"
+  ],
   "author": "daniele@xibitdigital.com",
   "license": "MIT",
   "repository": {
@@ -18,9 +22,20 @@
     "url": "https://github.com/xibitdigital/boilerplate-node-lib/issues"
   },
   "devDependencies": {
-    "chai": "^4.1.1",
-    "mocha": "^3.5.0",
-    "nyc": "^11.1.0"
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-polyfill": "^6.26.0",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.0",
+    "pretty-quick": "^1.6.0"
   },
-  "dependencies": {}
+  "engines": {
+    "node": ">=10.6.0"
+  },
+  "jest": {
+    "testURL": "http://localhost/",
+    "rootDir": ".",
+    "coveragePathIgnorePatterns": []
+  }
 }
