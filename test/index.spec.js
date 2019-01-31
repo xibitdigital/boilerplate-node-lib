@@ -1,20 +1,19 @@
 "use strict";
 
-const { expect } = require("chai");
-const { test } = require("../index");
+const { test } = require("../src/index");
 
 describe("Sample test", function() {
   it("should return true", function() {
     const data = true;
     const res = test(data);
 
-    expect(res).to.equal(true);
+    expect(res).toEqual(true);
   });
 
   it("should return false", function() {
     const data = false;
     const res = test(data);
 
-    expect(res).to.equal(false);
+    expect(res).toEqual(false);
   });
 });
